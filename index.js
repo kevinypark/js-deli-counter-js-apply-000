@@ -1,12 +1,16 @@
+arr = ['kevin', 'humzah']
+takeANumber(arr, "joe")
 function takeANumber(currentLine, customerName) {
   currentLine.push(customerName);
-  var placeInLine = 0;
-  for(var i=0;i<currentLine.length;i++) {
-    if(customerName === currentLine[i]) {
-      placeInLine = i+1;
-    }
-  }
-  return 'Welcome, ' + customerName + '. You are number ' + placeInLine + ' in line.';
+  
+  return 'Welcome, ' + customerName + '. You are number ' + currentLine.length + ' in line.';
+}
+var ticketNumber = 0;
+function takeANumberAlt(currentLine) {
+  ticketNumber++;
+  currentLine.push(ticketNumber);
+  return ticketNumber;
+  
 }
 
 function nowServing(katzDeliLine) {
